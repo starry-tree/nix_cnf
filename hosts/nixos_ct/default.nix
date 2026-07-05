@@ -4,7 +4,7 @@
   ...
 }:
 let
-  frpSecrets = (import ./secrets/frp.nix).frp;
+  frpSecrets = (import ../../secrets/frp.nix).frp;
 in {
   imports = [
     ../../modules/system.nix
