@@ -35,7 +35,7 @@
 
                 modules = [
                     ./hosts/nixos_ct
-                    # ./users/${username}/nixos.nix
+                    ./users/${username}/nixos.nix
                     home-manager.nixosModules.home-manager
                     {
                         home-manager.useGlobalPkgs = true;

@@ -4,7 +4,11 @@
   ...
 }:
 let
-  frpSecrets = (import ../../secrets/frp.nix).frp;
+  frpSecrets = {
+    token = builtins.getEnv "FRP_TOKEN";
+    serverAddr = builtins.getEnv "FRP_SERVER_ADDR";
+    serverPort = builtins.getEnv "FRP_SERVER_PORT";
+  };
 in {
   imports = [
     ../../modules/system.nix
